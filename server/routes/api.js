@@ -20,7 +20,19 @@ router.get('/posts', function(req, res) {
           console.log('Error retreiving posts');
         } else {
           res.json(posts);
-          console.log(posts);
+        }
+    });
+});
+
+router.get('/details/:id', function(req, res) {
+  console.log('Requesting post...');
+  post.findById(req.params.id)
+      .exec(function(err, post) {
+        if(err) {
+          console.log('Error retreiving post');
+        } else {
+          res.json(post);
+          console.log(post);
         }
     });
 });

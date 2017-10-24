@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+$bg: #2A3136;
+$text-color: #88949D;
+$accent-color: #30d9f0;
+
+body { 
+  background: $bg;
+  color: $text-color;
+  font-family: 'PT Sans', sans-serif;
+}
+
+a {
+  color: #FFFFFF;
+}
+
+a:hover {
+  color: $accent-color;
+}
+
+.cta-btn, .cta-btn:visited {
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  padding: 5px 12px;
+  float: right;
+  border-radius: 5px;
+}
+
+.cta-btn:hover {
+  background: $accent-color;
+  color: $bg;
+}
