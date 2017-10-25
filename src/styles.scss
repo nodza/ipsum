@@ -4,6 +4,10 @@ $bg: #2A3136;
 $text-color: #88949D;
 $accent-color: #30d9f0;
 
+body, html { 
+  height: 100%;
+}
+
 body { 
   background: $bg;
   color: $text-color;
@@ -29,4 +33,20 @@ a:hover {
 .cta-btn:hover {
   background: $accent-color;
   color: $bg;
+}
+
+h1 {
+  font-family: 'PT Sans', sans-serif;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4.2rem;
+  line-height: 8.2rem;
+}
+
+.body-blur {
+  background: $bg url(/assets/images/blur-bg.png) no-repeat top center !important;
+  background-size: 90% !important;
+  height: 100%;
 }

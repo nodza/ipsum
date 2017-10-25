@@ -20,7 +20,7 @@
           </a>
         </div>
       </div>
-      <p>{{ post.description }}</p>
+      <p>{{ post.description | length: 160 }}</p>
       <a routerLink="/details/{{ post._id }}" class="cta-btn btn2">More Info</a>
     </div>
   </div>
