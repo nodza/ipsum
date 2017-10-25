@@ -1,0 +1,35 @@
+$bg: #2A3136;
+$text-color: #88949D;
+$accent-color: #30d9f0;
+
+label {
+  color: $accent-color;
+  font-size: 1.5rem;
+}
+
+input[type='text'],textarea {
+  border: 1px solid #617879;
+  padding:22px 15px;
+  color:$bg;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+.filled {
+  font-family: 'PT Sans', sans-serif;
+  float: left;
+  border-radius: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700px;
+  padding: 12px 22px;
+  margin-top: 40px;
+  background:$accent-color;
+  color:$bg;
+}
+
+.alert {
+  margin: -5px 0 20px 0;
+}

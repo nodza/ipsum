@@ -37,4 +37,19 @@ router.get('/details/:id', function(req, res) {
     });
 });
 
+router.post('/posts', function(req, res) {
+  console.log('Creating a post...');
+  var newPost = new post();
+  newPost.title = req.body.title;
+  newPost.url = req.body.url;
+  newPost.description = req.body.description;
+  newPost.save(function(err, addedPost) {
+    if (err) {
+      console.log('Failed to save the post');
+    } else {
+      res.json(addedPost);
+    }
+  });
+});
+
 module.exports = router;

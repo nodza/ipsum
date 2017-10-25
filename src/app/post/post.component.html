@@ -1,0 +1,29 @@
+<div class="body-blur">
+  <div class="row columns">
+    <h1>Create a new Post</h1>
+  </div>
+  <form [formGroup]="postForm" (ngSubmit)="addPost(postForm.value)">
+    <div class="row">
+      <div class="columns small-12 medium-6">
+        <label>Title
+          <input type="text" name="title" [formControl]="postForm.controls['title']" />
+        </label>
+        <div class="alert" *ngIf="!postForm.controls['title'].valid && postForm.controls['title'].touched">You must have a title of upto 75 characters</div>
+      </div>
+      <div class="columns small-12 medium-6">
+          <label>URL
+            <input type="text" name="url" [formControl]="postForm.controls['url']" />
+          </label>
+          <div class="alert" *ngIf="!postForm.controls['url'].valid && postForm.controls['url'].touched">You must specify a url</div>
+      </div>
+    </div>
+    <div class="row columns">
+      <label>
+        Description
+        <textarea type="text" name="description" [formControl]="postForm.controls['description']"></textarea>
+      </label>
+      <div class="alert" *ngIf="!postForm.controls['description'].valid && postForm.controls['description'].touched">You must have a description of up to least 500 characters</div>
+      <input type="submit" class="cta-btn filled" value="Save Post" [disabled]="!postForm.valid" />
+    </div>
+  </form>
+</div>
